@@ -1,0 +1,131 @@
+<script>
+	
+	$(document).ready(function () {
+	
+	$("#btnFullFuel").prop('disabled',true);
+
+})
+</script>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 710px">
+<colgroup>
+<col style="width: 230px">
+<col style="width: 160px">
+<col style="width: 160px">
+<col style="width: 160px">
+</colgroup>
+  <tr>
+    <th class="tg-f4we">Station</th>
+    <th class="tg-f4we">Weight</th>
+    <th class="tg-f4we">Arm</th>
+    <th class="tg-ygzf">Moment</th>
+  </tr>
+  <tr>
+    <td class="tg-mvqg"></td>
+    <td class="tg-zi1i">(Pounds)</td>
+    <td class="tg-zi1i">(ins Aft of Datum)</td>
+    <td class="tg-fvc5">(lbs-ins / 1000)</td>
+  </tr>
+  <tr>
+    <td class="tg-kiua">BEW</td>
+    <td class="tg-3a3g"><span class="form-control-static" id="bewWgt"></span></td>
+    <td class="tg-3a3g"><span class="form-control-static" id="bewArm"></span></td>
+    <td class="tg-6nwz"><span class="form-control-static" id="bewMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-7jv3"><span style="margin-right:30px"><button type="button" id="btnFullFuel" class="btn btn-info btn-sm" disabled="true" onclick="fuelManage('Set Full')">Set Full Fuel</button></span>Fuel</td>
+    <td class="tg-8kb5"><span class="form-control-static" id="fuelWgt"></span></td>
+    <td class="tg-8kb5"><span class="form-control-static" id="fuelArm"></span></td>
+    <td class="tg-gg56"><span class="form-control-static" id="fuelMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-vbzu">Oil</td>
+    <td class="tg-yw4l"><span class="form-control-static" id="oilWgt"></span></td>
+    <td class="tg-yw4l"><span class="form-control-static" id="oilArm"></span></td>
+    <td class="tg-yw4l"><span class="form-control-static" id="oilMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-7jv3">Front Seats</td>
+    <td class="tg-8kb5"><span class="form-control-static" id="fsWgt"></span></td>
+    <td class="tg-8kb5"><span class="form-control-static" id="fsArm"></span></td>
+    <td class="tg-gg56"><span class="form-control-static" id="fsMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-vbzu">Rear Seats</td>
+    <td class="tg-yw4l"><span class="form-control-static" id="rsWgt"></span></td>
+    <td class="tg-yw4l"><span class="form-control-static" id="rsArm"></span></td>
+    <td class="tg-yw4l"><span class="form-control-static" id="rsMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-7jv3">Baggage Area 1</td>
+    <td class="tg-8kb5"><input class="form-control form-control-sm" type="number" name="bag1" value="0" step="5" min="0" max="100" id="bag1"></td>
+    <td class="tg-8kb5"><span class="form-control-static" id="bag1Arm"></span></td>
+    <td class="tg-gg56"><span class="form-control-static" id="bag2Mom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-kiua">Baggage Area 2</td>
+    <td class="tg-3a3g"><input class="form-control form-control-sm" type="number" name="bag2" value="0" step="5" min="0" max="40" id="bag2"></td>
+    <td class="tg-3a3g"><span class="form-control-static" id="bag2Arm"></span></td>
+    <td class="tg-6nwz"><span class="form-control-static" id="bag2Mom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-gzvh" colspan="4">Calculation Totals</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-eb4n">Weight</td>
+    <td class="tg-eb4n">C of G</td>
+    <td class="tg-eb4n">Moment</td>
+  </tr>
+  <tr>
+    <td class="tg-7jv3">Take Off</td>
+    <td class="tg-5cl1"><span class="form-control-static" id="toWgt"></span></td>
+    <td class="tg-5cl1"><span class="form-control-static" id="toCofG"></span></td>
+    <td class="tg-5cl1"><span class="form-control-static" id="toMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-kiua">Landing</td>
+    <td class="tg-003s"><span class="form-control-static" id="lndWgt"></span></td>
+    <td class="tg-003s"><span class="form-control-static" id="lndCofG"></span></td>
+    <td class="tg-003s"><span class="form-control-static" id="lndMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-7jv3">Zero Fuel</td>
+    <td class="tg-5cl1"><span class="form-control-static" id="zfWgt"></span></td>
+    <td class="tg-5cl1"><span class="form-control-static" id="zfCofG"></span></td>
+    <td class="tg-5cl1"><span class="form-control-static" id="zfMom"></span></td>
+  </tr>
+  <tr>
+    <td class="tg-wfs5" colspan="4">Fuel Calculations</td>
+  </tr>
+  <tr>
+    <td class="tg-m33c"><span id="fuelToggle" style="margin-right:20px" class="btn-group btn-group-sm">
+							<button type="button" id="USG" class="btn btn-danger" onclick="toggleFuel('USG')">USG</button>
+							<button type="button" id="WGT" class="btn btn-outline-primary" onclick="toggleFuel('WGT')">WGT</button></span>Fuel Loaded</td>
+    <td class="tg-8kb5"><input class="form-control form-control-sm" type="number" name="fuelLoaded" value="0" step="10" min="0" id="fuelLoaded" onchange="fuelManage('Fuel Load')"></td>
+    <td class="tg-8nyl">Consumption (gph)</td>
+    <td class="tg-j2zy"><input class="form-control form-control-sm" type="number" name="fuelBurn" value="8" step=".2" min="6" max="12" id="fuelBurn"></td>
+  </tr>
+    <tr>
+    <td class="tg-vbzu">Fuel Remaining (usg)</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-vbzu">Flight Time</td>
+    <td class="tg-yw4l"><input class="form-control form-control-sm" type="number" name="flightTime" value="1.2" step=".1" min=".5" max="5" id="flightTime"></td>
+  </tr>
+
+  <tr>
+    <td class="tg-ch0l" colspan="4">Pilot / Passenger Weight Calculations</td>
+  </tr>
+  <tr>
+    <td class="tg-9p4k">Pilot</td>
+    <td class="tg-xoa2"><input class="form-control form-control-sm" type="number" name="pilotWgt" value="0" step="10" min="0" max="300" id="pilotWgt"></td>
+    <td class="tg-9p4k">Front Pax</td>
+    <td class="tg-xoa2"><input class="form-control form-control-sm" type="number" name="fsWgt" value="0" step="10" min="0" max="300" id="fsWgt"></td>
+  </tr>
+  <tr>
+    <td class="tg-vbzu">Rear Pax</td>
+    <td class="tg-yw4l"><input class="form-control form-control-sm" type="number" name="rs1Wgt" value="0" step="10" min="0" max="300" id="rs1Wgt"></td>
+    <td class="tg-vbzu">Rear Pax</td>
+    <td class="tg-yw4l"><input class="form-control form-control-sm" type="number" name="rs2Wgt" value="0" step="10" min="0" max="300" id="rs2Wgt"></td>
+  </tr>
+</table>
