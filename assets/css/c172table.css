@@ -1,0 +1,202 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aaa;
+        margin: 0px auto;
+    }
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aaa;
+        color: #333;
+        background-color: #fff;
+    }
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aaa;
+        color: #fff;
+        background-color: #f38630;
+    }
+    .tg .tg-8nyl {
+        background-color: #FCFBE3;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: right;
+        vertical-align: middle
+    }
+    .tg .tg-j2zy {
+        background-color: #FCFBE3;
+        vertical-align: middle
+    }
+    .tg .tg-gg56 {
+        background-color: #FCFBE3;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-vbzu {
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: right;
+    }
+    .tg .tg-3a3g {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;
+        ;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-gzvh {
+        font-weight: bold;
+        background-color: #f38630;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif !important;
+        ;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-mvqg {
+        background-color: #FCFBE3;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+    .tg .tg-9p4k {
+        background-color: #ffffff;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: right;
+        vertical-align: middle
+    }
+    .tg .tg-f4we {
+        font-weight: bold;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-ygzf {
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-wfs5 {
+        font-weight: bold;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        background-color: #f38630;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-zi1i {
+        background-color: #FCFBE3;
+        font-style: italic;
+        font-size: 11px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: center
+    }
+    .tg .tg-fvc5 {
+        background-color: #FCFBE3;
+        font-style: italic;
+        font-size: 11px;
+        text-align: center
+    }
+    .tg .tg-kiua {
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        color: #000000;
+        text-align: right;
+        vertical-align: middle
+    }
+    .tg .tg-6nwz {
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-7jv3 {
+        background-color: #FCFBE3;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        color: #000000;
+        text-align: right;
+        vertical-align: middle
+    }
+    .tg .tg-8kb5 {
+        background-color: #FCFBE3;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-yw4l {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-eb4n {
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        color: #000000;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-5cl1 {
+        background-color: #FCFBE3;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        color: #000000;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-003s {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        color: #000000;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-m33c {
+        background-color: #FCFBE3;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: right;
+        vertical-align: middle
+    }
+    .tg .tg-ch0l {
+        font-weight: bold;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        background-color: #f38630;
+        color: #f7fdfa;
+        text-align: center;
+        vertical-align: middle
+    }
+    .tg .tg-xoa2 {
+        background-color: #ffffff;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !important;;
+        text-align: center;
+        vertical-align: middle
+    }
+</style>
