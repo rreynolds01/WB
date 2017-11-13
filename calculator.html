@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Weight &amp; Balance : Calculator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/c172table.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/application.css">
+	<script src="assets/js/chartDefaults.js"></script>
+	<script src="assets/js/defaults.js"></script>
+	<script src="assets/js/chart.js"></script>
+	<script src="assets/js/application.js"></script>
+	<script src="assets/js/canvasjs.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+        		<div class="col-md-12"><br></div><!-- Build a bit of space under the top -->
+    	</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<img src="assets/images/logo.png" class="img-responsive" alt="Logo">
+			</div>
+			<div class="col-lg-6 text-right">
+				<h3>Weight &amp; Balance Calculator</h3>
+			</div>
+		</div>
+		<!-- end of first row -->
+		<div class="row">
+			<div class="col-lg-6">
+				<div id="aircraftMenu" class="btn-group btn-group-md"><!-- This div block will be populated by a function call --></div>
+			</div>
+			<div class="col-lg-6 text-right">
+				<a href="index.html" class="btn btn-success btn-md" role="button"><span class="fa fa-chevron-left"></span> Type Selection</a>
+				<p>
+			</div>
+		</div>
+		<!-- end of second row -->
+		<div class="row">
+			<div class="col-lg-6">
+				<div id="001" class="card">
+					<div class="card-header" id="calcHeader"><span class="fa fa-calculator fa-lg"></span> Worksheet Calculator </div>
+					<div class="card-body">
+						<div id="calctable" class="mx-auto" style="width:710px"><!--  Contents inserted via jQuery dependant on the aircraft type selected --></div>
+					</div>
+				</div>
+			</div>
+			<!-- end of first col -->
+			<div class="col-lg-6">
+				<div id="002" class="card">
+					<div class="card-header" id="plotHeader">
+						<span class="fa fa-line-chart fa-lg"></span> Centre of Gravity Envelope Graph</div>
+					<div class="card-body">
+						<div id="chartContainer" style="height: 600px"></div><!-- Contents from chart application -->
+					</div>
+				</div>
+				<div id="003" class="card">
+					<div class="card-header" id="plotMe">
+						<span class="fa fa-th fa-lg"></span> Plot the Graph</div>
+					<div class="card-body">
+						<button type="button" class="btn btn-danger" id="plot" onclick="clicked();">Plot Sample Graph!</button>
+					</div>
+				</div>
+			</div>
+			<!-- end of second col -->
+		</div>
+		<!-- end of third row -->
+		<div class="row small">
+			<div class="col-lg-6 text-left">Copyright &copy 2018 All rights reserved</div>
+			<div class="col-lg-6 text-right">Version 1.0</div>
+		</div>
+		<div class="row">
+        	<div class="col-md-12"><br></div><!-- Build a bit of space above the bottom -->
+    	</div>
+	</div>
+	<!-- end of container -->
+</body>
+</html>
